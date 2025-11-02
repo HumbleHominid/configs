@@ -3,7 +3,3 @@
 
 # c obj
 *.o
-
-# binaries
-Suckless/dwm/dwm
-Suckless/st/st
