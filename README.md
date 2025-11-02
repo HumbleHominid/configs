@@ -1,3 +1,3 @@
-# useful-things
+# Config Files
 
-Collection of a bunch of dotfiles as well as Suckless' `st` and `dwm` modules with the patches I use preinstalled. 
+Repository of config files.
