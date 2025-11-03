@@ -1,3 +1,3 @@
 # Config Files
 
-Repository of config files.
+Repository on config files for zsh, vim, and more.
