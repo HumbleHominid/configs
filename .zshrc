@@ -12,3 +12,7 @@ source $DOTFILES/aliases
 
 # Gitit
 source $DOTFILES/gitit.zsh
+
+# Prompt
+fpath=($DOTFILES $fpath)
+autoload -Uz prompt_setup && prompt_setup
