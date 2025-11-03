@@ -11,6 +11,24 @@ if [ ! -f ~/.vimrc ]; then
     printf "\n"
 fi
 
+# Create .zshenv if it does not exist
+if [ ! -f ~/.zshenv ]; then
+    printf "" > ~/.zshenv
+
+    printf "Created empty .zshenv"
+    printf "\n"
+fi
+# Append an export for dotfiles to the end of ~/.zshenv
+if ! grep -q "export DOTFILES=" ~/.zshenv; then
+    printf "\n" >> ~/.zshenv
+    printf "# HumbleHominid\n" >> ~/.zshenv
+    printf "export DOTFILES=\"%s\"\n" "$DOTFILES" >> ~/.zshenv
+    printf "# HumbleHominid end\n" >> ~/.zshenv
+
+    printf "Appended DOTFILES export to .zshenv"
+    printf "\n"
+fi
+
 # Create .zshrc if it does not exist
 if [ ! -f ~/.zshrc ]; then
     printf "" > ~/.zshrc
@@ -22,7 +40,6 @@ fi
 if ! grep -q "# HumbleHominid" ~/.zshrc; then
     printf "\n" >> ~/.zshrc
     printf "# HumbleHominid\n" >> ~/.zshrc
-    printf "export DOTFILES=\"%s\"\n" "$DOTFILES" >> ~/.zshrc
     printf "source $DOTFILES/.zshrc\n" >> ~/.zshrc
     printf "# HumbleHominid end\n" >> ~/.zshrc
 
