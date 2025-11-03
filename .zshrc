@@ -7,5 +7,8 @@ export SAVEHIST=10000                   # Maximum events in history file
 autoload -U compinit; compinit
 _comp_options+=(globdots) # With hidden files
 
+# Git
+source $DOTFILES/aliases
+
 # Gitit
 source $DOTFILES/gitit.zsh
