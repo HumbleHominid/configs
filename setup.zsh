@@ -19,7 +19,7 @@ if [ ! -f ~/.zshenv ]; then
     printf "\n"
 fi
 # Append an export for dotfiles to the end of ~/.zshenv
-if ! grep -q "export DOTFILES=" ~/.zshenv; then
+if ! grep -q "# HumbleHominid" ~/.zshenv; then
     printf "\n" >> ~/.zshenv
     printf "# HumbleHominid\n" >> ~/.zshenv
     printf "export DOTFILES=\"%s\"\n" "$DOTFILES" >> ~/.zshenv
